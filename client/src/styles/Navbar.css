@@ -1,0 +1,151 @@
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 60px;
+
+    background: rgba(255, 255, 255, .92);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow: var(--shadow-small);
+
+    border-bottom: 1px solid var(--border);
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+    cursor: pointer;
+
+    background: linear-gradient(90deg,
+            var(--primary),
+            var(--orange));
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: transform .3s ease;
+
+    text-shadow:
+        0 0 12px rgba(255, 79, 163, .25);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+
+    list-style: none;
+}
+
+.nav-links li {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+}
+
+.nav-links li:hover {
+
+    color: var(--primary);
+
+}
+
+.nav-links li::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 3px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(90deg,
+            var(--primary),
+            var(--orange));
+
+    transition: .3s;
+
+}
+
+.nav-links li:hover::after {
+
+    width: 100%;
+
+}
+
+/* ==========================
+   SEARCH BUTTON
+========================== */
+
+.search-btn {
+
+    border: none;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    padding: 12px 26px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(90deg,
+            var(--primary),
+            var(--orange));
+
+    transition: .3s;
+
+    box-shadow: var(--shadow-small);
+
+}
+
+.search-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-medium);
+
+}
+
+.logo span {
+
+    color: var(--orange);
+
+    -webkit-text-fill-color: initial;
+
+}
